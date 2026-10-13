@@ -1,0 +1,39 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# IDE configurations
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Local datasets
+dataset/
+datasets/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
