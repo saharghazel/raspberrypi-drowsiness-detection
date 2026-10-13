@@ -1,21 +1,21 @@
-Driver Drowsiness Detection | Raspberry Pi 4 & Edge AI
+**Driver Drowsiness Detection | Raspberry Pi 4 & Edge AI**
 Real-time eye-state monitoring prototype designed for Raspberry Pi 4. The system combines computer vision with an on-device TensorFlow Lite CNN to classify eye images and display drowsiness alerts through a Flask dashboard. Optional GPIO outputs support a physical LED and buzzer.
 ![Dashboard interface preview](images/dashboard_preview.png)
 Dashboard preview with illustrative detection data.
-Features
-Live video capture from a USB webcam
-Face and eye localization using OpenCV Haar cascades
-Eye-state inference with a TensorFlow Lite model
-Web dashboard with live video, predictions, scores, statistics and alert history
-Visual and browser-audio alerts; optional LED and buzzer via GPIO
-Tech Stack
+**Features**
+- Live video capture from a USB webcam
+- Face and eye localization using OpenCV Haar cascades
+- Eye-state inference with a TensorFlow Lite model
+- Web dashboard with live video, predictions, scores, statistics and alert history
+- Visual and browser-audio alerts; optional LED and buzzer via GPIO
+**Tech Stack**
 Hardware: Raspberry Pi 4, USB webcam; optional LED and active buzzer  
 Software: Python, OpenCV, NumPy, TensorFlow Lite, Flask, GPIO Zero  
 Model input: 64 × 64 grayscale eye images
-Processing Pipeline
+**Processing Pipeline**
 `USB camera → Face/eye detection → Grayscale + resize (64 × 64) → Normalization → TFLite inference → Alert logic → Web dashboard / GPIO`
 The inference score is evaluated against a configurable threshold in `app.py`. The current backend raises a persistent alert after 10 consecutive sleepy classifications.
-Repository Structure
+**Repository Structure**
 ```text
 .
 ├── app.py                 # Video capture, inference, Flask API and optional GPIO
@@ -29,7 +29,7 @@ Repository Structure
 ├── requirements.txt
 └── .gitignore
 ```
-Run on Raspberry Pi 4
+**Run on Raspberry Pi 4**
 Requirements: Raspberry Pi OS, Python 3, a USB webcam accessible through Video4Linux, and a TensorFlow Lite interpreter compatible with your OS and Python version.
 ```bash
 sudo apt update
@@ -51,7 +51,7 @@ Connect an LED (with a current-limiting resistor) to BCM GPIO17 and a GPIO-compa
 ```bash
 GPIO_ALERTS=1 python3 app.py
 ```
-Project Status
+**Project Status**
 
 This project was developed and successfully tested on a Raspberry Pi 4 as part of an academic engineering project at the National Engineering School of Sousse (ENISo), Tunisia.
 
@@ -61,5 +61,5 @@ Academic Evaluation: 17/20
 
 The project demonstrates the practical implementation of Edge AI on embedded hardware for driver drowsiness monitoring.Author
 
-Sahar Ghazel  
-Electronics Engineering Student — National Engineering School of Sousse (ENISo), Tunisia
+**Sahar Ghazel  
+Electronics Engineering Student — National Engineering School of Sousse (ENISo), Tunisia**
