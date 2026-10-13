@@ -1,0 +1,5 @@
+# Install OS-managed libraries on Raspberry Pi OS (see README):
+# python3-opencv python3-numpy python3-flask python3-gpiozero
+# TFLite interpreter: install a compatible ARM build of tflite-runtime,
+# ai-edge-litert, or tensorflow in the Python environment you are using.
+# Avoid blindly installing x86/Windows wheels on a Raspberry Pi.
