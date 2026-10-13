@@ -1,21 +1,30 @@
 **Driver Drowsiness Detection | Raspberry Pi 4 & Edge AI**
+
 Real-time eye-state monitoring prototype designed for Raspberry Pi 4. The system combines computer vision with an on-device TensorFlow Lite CNN to classify eye images and display drowsiness alerts through a Flask dashboard. Optional GPIO outputs support a physical LED and buzzer.
 ![Dashboard interface preview](images/dashboard_preview.png)
 Dashboard preview with illustrative detection data.
+
 **Features**
+
 - Live video capture from a USB webcam
 - Face and eye localization using OpenCV Haar cascades
 - Eye-state inference with a TensorFlow Lite model
 - Web dashboard with live video, predictions, scores, statistics and alert history
 - Visual and browser-audio alerts; optional LED and buzzer via GPIO
+- 
 **Tech Stack**
+  
 Hardware: Raspberry Pi 4, USB webcam; optional LED and active buzzer  
 Software: Python, OpenCV, NumPy, TensorFlow Lite, Flask, GPIO Zero  
 Model input: 64 × 64 grayscale eye images
+
 **Processing Pipeline**
+
 `USB camera → Face/eye detection → Grayscale + resize (64 × 64) → Normalization → TFLite inference → Alert logic → Web dashboard / GPIO`
 The inference score is evaluated against a configurable threshold in `app.py`. The current backend raises a persistent alert after 10 consecutive sleepy classifications.
+
 **Repository Structure**
+
 ```text
 .
 ├── app.py                 # Video capture, inference, Flask API and optional GPIO
@@ -30,6 +39,7 @@ The inference score is evaluated against a configurable threshold in `app.py`. T
 └── .gitignore
 ```
 **Run on Raspberry Pi 4**
+
 Requirements: Raspberry Pi OS, Python 3, a USB webcam accessible through Video4Linux, and a TensorFlow Lite interpreter compatible with your OS and Python version.
 ```bash
 sudo apt update
