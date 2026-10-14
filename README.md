@@ -11,7 +11,7 @@ Dashboard preview with illustrative detection data.
 - Eye-state inference with a TensorFlow Lite model
 - Web dashboard with live video, predictions, scores, statistics and alert history
 - Visual and browser-audio alerts; optional LED and buzzer via GPIO
-- 
+  
 **Tech Stack**
   
 Hardware: Raspberry Pi 4, USB webcam; optional LED and active buzzer  
